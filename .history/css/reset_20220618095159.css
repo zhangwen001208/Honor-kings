@@ -1,0 +1,19 @@
+
+
+body,h1,h2,a,ul,ol,li{
+   margin: 0;
+   padding: 0;
+
+}
+
+a {
+ text-decoration: none;
+ color: #333;
+
+}
+ul,li,ol{
+   list-style: none;
+}
+img {
+   vertical-align: top;
+}

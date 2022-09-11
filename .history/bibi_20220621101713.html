@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="styleSheet"  href="./css/common.css" />
+    <link type="text/css" rel="styleSheet"  href="./css/reset.css" />
+    <style>
+        .animation {
+            display: flex;
+            width: 1178px;
+            height: 458px;
+            background-color: aliceblue;
+            margin: 0 auto;
+        }
+        .animation .animation-left {
+            width: 940px;
+            height: 458px;
+           
+
+        }
+        .animation .animation-left .area-header {
+            display: flex;
+            justify-content: space-between;
+            height: 28px;
+            margin-bottom: 12px;
+        }
+        .animation .animation-left .area-header .area-header-left{
+            display: flex;
+            align-items: center;
+            width: 102px;
+            height: 28px;
+
+        }
+        .animation .animation-left .area-header .icon {
+            width: 22px;
+            height: 22px;
+            margin-right: 6px;
+            background: url(./image/animation_icon.png) no-repeat;
+        }
+        .animation .animation-left .area-header .area-header-left a {
+            margin-right: 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 24px;
+            color: var(--text1);
+            transition: color .2s linear;
+
+        }
+        .animation .animation-left .area-header .area-header-right {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 189px;
+            height: 28px;
+            font-size: 13px;
+        }
+        .animation-left .area-header .area-header-right a {
+            display: block;
+            height: auto;
+            padding: 8px 12px;
+            line-height: 16px;       
+            border: 1px solid #666;
+            border-radius: 8px;
+            margin-left: 8px;
+            transform-origin: center;
+            transition: .2s;
+            cursor: pointer;
+
+        }
+        .animation-left .area-header .area-header-right .more {
+
+        }
+        .animation .animation-right {
+            width: 226px;
+            height: 458px;
+            background-color: bisque;
+            margin-left: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="animation">
+        <div class="animation-left">
+            <div class="area-header">
+                <div class="area-header-left">
+                <svg class="icon"></svg>
+                <a href="#">动画</a>
+                </div>
+                <div class="area-header-right">
+                    <a class="change">换一换</a>
+                    <a class="more">查看更多</a>
+
+                </div>
+                
+              
+                
+            </div>
+
+        </div>
+        <div class="animation-right">
+            
+
+
+        </div>
+
+
+    </div>
+
+    
+</body>
+</html>

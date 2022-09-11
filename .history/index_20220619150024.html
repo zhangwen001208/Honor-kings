@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王者荣耀官网</title>
+    <link type="text/css" rel="styleSheet"  href="./css/common.css" />
+    <link type="text/css" rel="styleSheet"  href="./css/reset.css" />
+    <style>
+        /*top */
+        .top-wrapper {
+            width: 980px;
+            margin: 0 auto;
+
+        }
+        .top .area {
+            display: flex;
+            justify-content: space-between;
+            height: 41px;
+            line-height: 41px;
+        }
+        .top .left-area {
+            display: flex;
+        }
+        .top .left-area .logo {
+            display: block;
+            width: 150px;
+            text-indent: -999px;
+            background: url(./image/top_logo.png) no-repeat center center ;
+        }
+        .top .right-area {
+            display: flex;
+        }
+        .top .right-area .item {
+            position: relative;
+        }
+        .top .right-area .item a {
+            display: block;
+            font-size: 14px;
+            color: #464646;
+
+        }
+        .top .right-area .item .growth {
+            padding-left: 30px;
+        }
+        .top .right-area .item .ranking {
+            padding-right: 30px;
+            margin-left: 20px;
+        }
+        .top .right-area .item .icon {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            background: url(./image/top_sprite.png) no-repeat;
+        }
+        .top .right-area .item  .gro {
+            left: 0;
+            
+            background-position: -30px 0;
+        }
+        .top .right-area .item .rank {
+            right: 0;
+            background-position: 0 0;
+            opacity: 0.2;
+            transform: rotate(90deg);
+        }
+        
+
+        /*hrader */
+        .header {
+           display: flex;
+           justify-content: space-between;
+           height: 84px;
+          
+           background-color: rgba(0, 0, 0, .8);
+            
+        }
+        .header .area {
+            display: flex;
+            justify-content: space-around;
+            height: 84px;
+            width: 890px;
+            margin: 0 auto;
+            
+        }
+        .header .left-area {
+              display: flex;
+        }
+        .header .left-area .logo a {
+            position: relative;
+            top:50%;
+            transform: translate(0,-50%);
+            display: block;
+            width: 200px;
+            height: 54px;
+            text-indent: -9999px;
+            background: url(./image/logo.png) no-repeat center center;
+
+        }
+        .header .left-area .nav-list {
+            display: flex;
+            margin-left: 25px;
+
+        }
+        .header .left-area .nav-list .item{
+            width: 110px;
+            padding-right: 5px;
+           
+        }
+        .header .left-area .nav-list .item a{
+            display: block;
+            font-size: 18px;
+            height: 100%;
+            box-sizing: border-box;
+            padding-top: 20px;
+            color: #c9c9dd;
+            text-align: center;
+
+        }
+        .header .left-area .nav-list .item .desc {
+            display: block;
+            font-size: 12px;
+            color: #858792;
+            margin-top: 9px;
+        }
+        .header .left-area .nav-list .item:hover,
+        .header .left-area .nav-list .item.active {
+            background: url(./image/mian_sprit.png) no-repeat;
+        }
+        .header .left-area .nav-list .item:hover a ,
+        .header .left-area .nav-list .item.active a{
+            color: #e4b653;    
+        }
+        .header .left-area .nav-list .item:hover .desc ,
+        .header .left-area .nav-list .item.active .desc{
+            color: #e4b653;
+            
+        }
+        .header .right-area  {
+            display: flex;
+            
+
+        }
+        .header .right-area .search a {
+            display: block;
+            width: 27px;
+            height: 26px; 
+            margin: 30px auto 0;  
+            background:url(./image/nav_search.png) no-repeat ;
+        }
+        .header .right-area .login_pannle {
+            display: flex;
+            margin-left: 20px;
+            height: 54px;
+        }
+        .header .right-area .login_pannle .avater {
+            display: block;
+            margin-top: 22px;
+            
+        }
+        .header .right-area .login_pannle .avater img {
+            border: 1px solid #d9ad50;
+            border-radius: 42px;
+        }
+        .header .right-area .login_pannle .login {
+            margin-left: 10px;
+            width: 130px;
+            height: 45px;
+        }
+        .header .right-area .login_pannle .login a {
+            display: block;
+           color: #ffffff;
+           font-size: 16px;
+           margin-top: 22px;
+           margin-bottom: 5px;
+          
+        }
+        .header .right-area .login_pannle .login .per_info {
+            color: #858792;
+            font-size: 14px;
+        }
+        .wrapper{
+            min-width: 1280px;
+            position: relative;
+            
+        }
+        .wrapper .bg-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+             width: 100%;
+            height: 2000px;
+            background: url(./image/bg_content.jpg) no-repeat center top;
+
+        }
+        .main {
+        padding-top: 540px;
+         
+        background-color: #d9ad50;
+        }
+        .main .news-section {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            width: 1200px;
+            height: 342px;
+           background: url(./image/news_bg.png) no-repeat;
+        }
+        .main .news-section .banners { 
+            width: 605px;
+            height: 342px;
+       
+            
+        }
+        .main .news-section .banners .swapper {
+            display: flex;
+            width: 604px;
+            height: 297px;
+            overflow: hidden;
+           
+
+        }
+        .main .news-section .banners .adbtn {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+
+            width: 604px;
+            height: 44px;
+            overflow: hidden;
+
+        }
+        .main .news-section .banners .adbtn .adbtn-list {
+           display: block;
+          
+            width: 120.8px;
+            height: 44px;
+            line-height: 44px;
+            font-size: 14px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            cursor: pointer;
+            text-align: center;
+            color: #b1b2be;
+        }
+        .main .news-section .banners .adbtn .adbtn-list:hover {
+            background: rgba(255,255,255,0.15);
+            color: #f3c258;
+        }
+
+        .main .news-section .news {
+            flex: 1;
+            overflow: hidden;
+            height: 342px;
+            padding: 0 17px;
+            
+        }
+        .main .news-section .news .title-list {
+            display: flex;
+            height: 48px;
+            border-bottom: 1px solid #000;
+        }
+        .news-section .news .title-list .item {
+           width: 52px;
+           
+         
+        }
+        .news-section .news .title-list .item a {
+            display: block;
+            height: 45px;
+            line-height: 45px;
+            color: #b8b9c5;
+            border-bottom: 3px solid transparent;
+            font-size: 14px;
+            text-align: center;
+           
+        }
+        .news-section .news .title-list .item.active a,
+        .news-section .news .title-list .item:not(.more) a:hover {
+            color:#f3c258;
+            border-bottom-color:#f3c258 ;
+        }
+        .main .news-section .news .notice {
+            width: 294px;
+            height: 36px;
+            padding: 0 15px;
+            line-height: 36px;
+            margin-top: 18px;
+            margin-bottom: 11px;
+            text-align: center;
+            
+            background-color: #414046;
+            
+        }
+        .main .news-section .news .notice a {
+            display: block;
+            color: #f3c258;
+            font-size: 18px;    
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+        .main .news-section .news-list .item {
+            width: 325px;
+            height: 21px;
+            margin-bottom: 11px;
+            overflow: hidden;
+        }
+        .main .news-section .news-list .item  a {
+            width: 269px;
+            font-size: 14px;
+            color: #b8b9c5;
+        }
+        .news-section .news-list .item .list-notice {
+            margin-right: 5px;
+            font-size: 12px;
+            display: inline-block;
+            line-height: 16px;
+            border: 1px solid currentColor;
+            vertical-align: top;
+            margin-top: 2px;
+            width: 32px;
+            text-align: center;
+            border-radius: 2px;
+            color: #f4be19;
+        }
+        .news-section .news-list .item .hont{
+            color: #ff3636;
+        }
+        .news-section .news-list .item .list-info {
+            width: 230px;
+            font-size: 14px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .main .news-section .news-list .item .news-time {
+           color: #999;
+           font-size: 12px;
+        }
+
+        .main .news-section .download {
+            width: 236px;
+            height: 342px;
+            background-color: skyblue;
+        }
+        .main .news-section .download a {
+            display: block;
+            width: 236px;
+            background: url(./image/download_sprit.png) no-repeat ;
+        }
+        .main .news-section  a.download-btn {
+            height: 128px;
+            background-position:0 -219px;
+        }
+        .main .news-section a.guard-btn {
+           height: 106px;
+           background-position:0 -350px;
+        }
+        .main .news-section a.experience-btn {
+            height: 108px;
+            background-position:0 -461px;
+        }
+
+        .main .content-section {
+            
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            overflow: hidden;
+            height: 134px;
+            margin: 28px auto 34px;
+            letter-spacing: -0.35em;
+          
+        }
+        .main .content-section a {
+            display: block;
+            width: 291px;
+            height: 134px;
+            overflow: hidden;
+        }
+        .main .content-section a>img {
+            border-radius: 2px 2px 2px 2px;
+            cursor: pointer;
+			transition: all 0.6s;
+        }
+        .main .content-section a>img:hover {
+            transform: scale(1.2);
+        }
+        .main .match-setction {
+            position: relative;
+            display: flex;
+            width: 1200px;
+            height: 528px;
+            background-color: #d9ad50;
+        }
+        .main .match-setction .match-left {
+            width: 872px;
+            height: 528px;
+            margin-right: 33px;
+            background-color: red;
+
+        }
+        .main .match-setction .match-right {
+            width: 295px;
+            height: 528px;
+            background-color: blanchedalmond;
+
+        }
+        .main .match-setction .match-right .item-header {
+            height: 26px;
+            margin-bottom: 16px;
+        }
+        .match-setction .match-right .item-header .item-title {
+            width: 140px;
+            height: 25px;
+            
+        }
+
+
+        
+
+
+       
+
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="top-wrapper area">
+            <div class="left-area">
+                <h2 class="logo">
+                    <a href="#">腾讯游戏</a>
+                </h2>
+                <div class="recommend">
+                    <img src="./image/recommend.jpg">
+                </div>
+
+            </div>
+           
+            <ul class="right-area" >
+                <li class="item">
+                    <i class="icon gro"></i>
+                    <a href="#" class="growth">成长守护平台</a>
+                </li>
+                <li class="item">
+                    <a href="#" class="ranking">腾讯游戏排行榜 </a>
+                    <i class="icon rank"></i>
+                </li>
+            </ul>
+        </div>
+    </div>  
+    <div class="header">
+        <div class="area header-wrapper">
+            <div class="left-area">
+                <h1 class="logo">
+                    <a href="#">王者荣耀</a>
+                </h1>
+                <ul class="nav-list">
+                    <li class="item active" >
+                        <a href="#">
+                            游戏资料
+                            <span class="desc">DATA</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            内容中心
+                            <span class="desc">CONTENTS</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                           赛事中心
+                            <span class="desc">MATCH</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                           百态王者
+                            <span class="desc">CULTURE</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            社区互动
+                            <span class="desc">COMMUNITY</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            玩家支持
+                            <span class="desc">PLAYER</span>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            IP新游
+                            <span class="desc">NEW GAMES</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="right-area">
+                <div class="search">
+                    <a href="#"></a>
+                </div>
+                <div class="login_pannle">
+                    <a href="#" class="avater">
+                        <img src="./image/dewonld.png" >
+                    </a>
+                    <div class="login">
+                        <a href="#" >欢迎登录</a>
+                        <p class="per_info">登陆后查看战绩</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="wrapper">
+        <div class="bg-content">    
+        </div>
+        <div class="main main_wrapper">
+            <div class="news-section">
+                <div class="banners">
+                    <div class="swapper">
+                        <a href="#">
+                            <img src="./image/swaper01.jpeg">
+                        </a>
+                        <a href="#">
+                            <img src="./image/swaper01.jpeg">
+                        </a>
+                        <a href="#">
+                            <img src="./image/swaper01.jpeg">
+                        </a>
+                        <a href="#">
+                            <img src="./image/swaper01.jpeg">
+                        </a>
+                        <a href="#">
+                            <img src="./image/swaper01.jpeg">
+                        </a>
+
+                    </div>
+                    <div class="adbtn">
+                        <a href="#" class="adbtn-list">
+                            双生对决新玩法
+                        </a>
+                        <a href="#" class="adbtn-list">
+                            场景方案票选
+                        </a>
+                        <a href="#" class="adbtn-list">
+                            皮肤特性升级
+                        </a>
+                        <a href="#" class="adbtn-list">
+                            全国大赛全国32强
+                        </a>
+                        <a href="#" class="adbtn-list">
+                            夏季赛王牌选手
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="news">
+                    <ul class="title-list">
+                        <li class="item active">
+                            <a href="#">热门</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">新闻</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">公告</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">活动</a>
+                        </li>
+                        <li class="item">
+                            <a href="#">赛事</a>
+                        </li>
+                        <li class="item more">
+                            <a href="#">...</a>
+                        </li>
+                    </ul>
+                    <p class="notice">
+                        <a href="#">元歌源·梦皮肤展示场景投票活动开启公告</a>
+                    </p>
+                    <ul class="news-list">
+                        <li class="item">
+                            <a href="#" class="list">
+                                <span class="list-notice">
+                                    公告
+                                </span>
+                                <span class="list-info">
+                                    6月16日抢先服版本更新公告
+                                </span>
+                            </a>
+                            <em class="news-time">
+                                06/15
+                            </em>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="list">
+                                <span class="list-notice hont">
+                                    热门
+                                </span>
+                                <span class="list-info">
+                                    宫本武藏英雄品质升级对应的皮肤调整进展【老亚瑟的答疑时间】
+                                </span>
+                            </a>
+                            <em class="news-time">
+                                06/15
+                            </em>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="list">
+                                <span class="list-notice">
+                                    公告
+                                </span>
+                                <span class="list-info">
+                                    6月15日全服不停机更新公告
+                                </span>
+                            </a>
+                            <em class="news-time">
+                                06/15
+                            </em>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="list">
+                                <span class="list-notice ">
+                                    公告
+                                </span>
+                                <span class="list-info">
+                                    6月10日全服不停机更新公告
+                                </span>
+                            </a>
+                            <em class="news-time">
+                                06/15
+                            </em>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="list">
+                                <span class="list-notice hont">
+                                    热门
+                                </span>
+                                <span class="list-info">
+                                    吕布英雄特效升级及其对应的皮肤调整【老亚瑟的答疑时间】
+                                </span>
+                            </a>
+                            <em class="news-time">
+                                06/15
+                            </em>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="list">
+                                <span class="list-notice">
+                                    公告
+                                </span>
+                                <span class="list-info">
+                                    6月2日全服不停机更新公告
+                                </span>
+                            </a>
+                            <em class="news-time">
+                                06/15
+                            </em>
+                        </li>
+                        <li class="item">
+                            <a href="#" class="list">
+                                <span class="list-notice hont">
+                                    热门
+                                </span>
+                                <span class="list-info">
+                                    三街工作室|共创装备即将上线体验服！
+                                </span>
+                            </a>
+                            <em class="news-time">
+                                06/15
+                            </em>
+                        </li>
+                    </ul>
+    
+                </div>
+                <div class="download">
+                    <a class="download-btn" href="#"></a>
+                    <a class="guard-btn" href="#"></a>
+                    <a class="experience-btn" href="#"></a>
+
+                    
+    
+                </div>
+            </div>
+            <div class="content-section">
+                <a href="#" >
+                    <img src="./image/entrance1.jpg" alt="">
+                </a>
+                <a href="#" >
+                    <img src="./image/entrance2.png" alt="">
+                </a>
+                <a href="#" >
+                    <img src="./image/entrance3.jpg" alt="">
+                </a>
+                <a href="#" >
+                    <img src="./image/entrance4.jpg" alt="">
+                </a>
+
+    
+            </div>
+            <div class="match-setction">
+                <div class="match-left"></div>
+                <div class="match-right">
+                    <div class="item-header">
+                        <h3 class="item-title">英雄/皮肤</h3>
+                        <a href="#" class="item-more">更多</a>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+    </div>
+    
+    
+
+    
+</body>
+</html>
